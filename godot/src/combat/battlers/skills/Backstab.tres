@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://src/combat/battlers/skills/Skill.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/icons/slash.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Backstab"
+description = "Use your speed to strike where it it most vulnerable"
+icon = ExtResource( 2 )
+action_type = "backstab"
+mana_cost = 2
+base_damage = 1
+success_chance = 0.42

@@ -1,6 +1,6 @@
 extends CombatAction
 
-class_name SkillAction
+class_name Backstab
 
 var skill: Skill = null
 
@@ -18,7 +18,7 @@ func execute(targets):
 	actor.stats.mana -= skill.mana_cost
 	randomize()
 	if randf() < skill.success_chance:
-		var hit = Hit.new(actor.stats.strength, skill.base_damage)
+		var hit = Hit.new(actor.stats.speed, skill.base_damage + actor.stat_changes.speed)
 		for target in targets:
 			target.take_damage(hit)
 	else:
@@ -29,7 +29,6 @@ func execute(targets):
 
 	yield(return_to_start_position(), "completed")
 	return true
-
 
 func can_use() -> bool:
 	return actor.stats.mana >= skill.mana_cost

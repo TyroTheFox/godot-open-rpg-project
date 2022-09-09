@@ -2,7 +2,6 @@ extends Node
 
 const skill_action_scene = preload("res://src/combat/battlers/actions/SkillAction.tscn")
 
-
 func initialize(skills: Array) -> void:
 	for skill in skills:
 		var new_skill = skill_action_scene.instance()

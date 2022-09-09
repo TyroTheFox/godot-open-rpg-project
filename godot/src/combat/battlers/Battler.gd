@@ -26,6 +26,13 @@ var display_name: String
 export var party_member = false
 export var turn_order_icon: Texture
 
+var stat_changes = {
+	"health": 0,
+	"max_mana": 0,
+	"strength": 0,
+	"defence": 0,
+	"speed": 0
+}
 
 func _ready() -> void:
 	var direction: Vector2 = Vector2(-1.0, 0.0) if party_member else Vector2(1.0, 0.0)
@@ -62,6 +69,8 @@ func take_damage(hit):
 	if stats.health > 0:
 		skin.play_stagger()
 
+func change_stat(stat, value):
+	stat_changes[stat] += value
 
 func _on_health_depleted():
 	selectable = false

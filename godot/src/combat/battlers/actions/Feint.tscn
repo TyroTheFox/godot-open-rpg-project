@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/combat/battlers/actions/Feint.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/icons/slash.png" type="Texture" id=2]
+
+[node name="CombatAction" type="Node"]
+script = ExtResource( 1 )
+icon = ExtResource( 2 )
+description = "Trick your enemies to gain Speed"

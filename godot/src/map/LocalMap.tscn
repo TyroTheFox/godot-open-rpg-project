@@ -104,7 +104,5 @@ layer = 100
 visible = false
 
 [editable path="GameBoard/Pawns/EncounterPawn"]
-
 [editable path="GameBoard/Pawns/DialoguePawn"]
-
 [editable path="GameBoard/Pawns/DialogueCombatPawn"]
