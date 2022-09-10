@@ -5,10 +5,10 @@
 [ext_resource path="res://src/combat/battlers/jobs/GodetteJob.tres" type="Resource" id=3]
 [ext_resource path="res://assets/sprites/battlers/godette_portrait_256.png" type="Texture" id=4]
 [ext_resource path="res://src/combat/animation/GodetteAnim.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/combat/battlers/skills/LearnedSkill.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/combat/battlers/skills/LearnedSkill.gd" type="Script" id=6]
+[ext_resource path="res://src/combat/battlers/skills/Backstab.tres" type="Resource" id=7]
 [ext_resource path="res://src/combat/battlers/ai/PlayerInput.gd" type="Script" id=8]
 [ext_resource path="res://src/map/pawns/GodettePawnAnim.tscn" type="PackedScene" id=9]
-[ext_resource path="res://src/combat/battlers/actions/Backstab.tscn" type="PackedScene" id=17]
 
 [node name="Party" type="Node2D"]
 script = ExtResource( 1 )
@@ -24,9 +24,10 @@ turn_order_icon = ExtResource( 4 )
 
 [node name="GodetteAnim" parent="Rogue/Battler/Skin" index="2" instance=ExtResource( 5 )]
 
-[node name="LolliSlash" parent="Rogue/Battler/Skills" index="0" instance=ExtResource( 6 )]
-
-[node name="Backstab" parent="Rogue/Battler/Skills" index="1" instance=ExtResource( 17 )]
+[node name="Backstab" type="Node" parent="Rogue/Battler/Skills" index="0"]
+script = ExtResource( 6 )
+skill = ExtResource( 7 )
+level = 0
 
 [node name="AI" parent="Rogue/Battler" index="6"]
 script = ExtResource( 8 )

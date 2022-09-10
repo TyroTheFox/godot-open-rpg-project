@@ -8,6 +8,7 @@ script = ExtResource( 2 )
 name = "Bilboshot"
 description = "It does not always hit but when it does, it hits hard!"
 icon = ExtResource( 1 )
+action_type = "normal_attack"
 mana_cost = 4
 base_damage = 8
 success_chance = 0.75

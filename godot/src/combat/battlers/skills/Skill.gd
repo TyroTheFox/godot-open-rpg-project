@@ -7,7 +7,7 @@ signal missed(text)
 export var name: String = "Skill"
 export var description: String = ""
 export var icon: Texture = load("res://icon.png")
-export(String) var action_type: String = "normal_action"
+export(String) var action_type: String = "normal_attack"
 
 export var mana_cost: int
 export var base_damage: int

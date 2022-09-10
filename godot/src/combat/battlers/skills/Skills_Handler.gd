@@ -1,13 +1,11 @@
-[gd_scene load_steps=2 format=2]
-
-[sub_resource type="GDScript" id=1]
-script/source = "extends Node
+extends Node
+class_name Skills_Handler
 
 func get_children():
-	\"\"\"
+	"""
 	Only return the skills that a party member has learned according to
 	their level
-	\"\"\"
+	"""
 	var all_skills = .get_children()
 	if len(all_skills) == 0:
 		return []
@@ -21,7 +19,3 @@ func get_children():
 		if skill.level <= stats.level:
 			learned.append(skill.skill)
 	return learned
-"
-
-[node name="Skills" type="Node"]
-script = SubResource( 1 )
